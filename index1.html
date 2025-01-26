@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>starbucks</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgb(100, 72, 72);
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: rgb(251, 79, 79);
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+}
+
+.about{
+    padding: 40px 20px;
+    text-align: center;
+}
+#menu{
+    text-align: center;
+}
+
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.menu-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #ff6363;
+}
+
+.card-content .description {
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.card-content .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+footer {
+    background: rgb(99, 64, 64); 
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+    margin-bottom: 20px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-about p,
+.footer-contact p {
+    line-height: 1.6;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: rgb(252, 70, 42); 
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    background: rgb(255, 78, 78);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: rgb(247, 127, 100);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Starbucks</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/reservation.html">reservation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="https://content3.jdmagicbox.com/v2/comp/thiruvananthapuram/e5/0471px471.x471.231119164647.v5e5/catalogue/starbucks-coffee-thiruvananthapuram-coffee-shops-7nev6m82u7.jpg" alt="Cozy cafe environment">
+        <div class="hero-text">
+            <h1>Welcome to Starbucks</h1>
+            <p>Your daily dose of caffeine and comfort.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At starbucks, we brew the finest coffee in town, paired with freshly baked goods. Step in to enjoy a relaxing ambiance and exceptional service.We believe Starbucks can, and should, have a positive impact on the communities we serve.Behind every cup of coffee is a story. Enjoy some of our favorites along with all the latest news from the storytellers at Starbucks Stories.</p>
+    </section>
+    <h2 id="menu" class="menu">our menu</h2>
+    
+        <section class="menu-container">
+            
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Cappuccino_at_Sightglass_Coffee.jpg/1200px-Cappuccino_at_Sightglass_Coffee.jpg" alt="Coffee">
+            </div>
+            <div class="card-content">
+              <h2>Cappuccino</h2>
+              <p class="description">Rich espresso with steamed milk and foam.</p>
+              <p class="price">₹80 - ₹120</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://media.istockphoto.com/id/1209718260/photo/cold-brew-coffee-with-milk-and-ice-cubes-in-glass.jpg?s=612x612&w=0&k=20&c=ZJRnsNhnEwHPvt6-EsU2dJmNhi2hmdFq-_w56YbR648=" alt="clod brew black">
+            </div>
+            <div class="card-content">
+              <h2>clod brew black</h2>
+              <p class="description">made by slowly steeping coarsely ground coffee beans in room temperature water for at least six hours.</p>
+              <p class="price">₹140 - ₹190</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://t4.ftcdn.net/jpg/09/48/73/25/360_F_948732590_tbYyUG0nbYoTTcNZJC4pqTKhhuBFnmfW.jpg" alt="Matcha Latte">
+            </div>
+            <div class="card-content">
+              <h2>Matcha Latte</h2>
+              <p class="description">Earthy green tea with creamy milk.</p>
+              <p class="price">₹170 - ₹220</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://media.istockphoto.com/id/458850515/photo/homemade-cinnamon-roll-pastry.jpg?s=612x612&w=0&k=20&c=-4jcOs1v73SCGdVW6b8npKnqYb9BWWED9KNZbFjZsDQ=" alt="cinnamon roll">
+            </div>
+            <div class="card-content">
+              <h2>cinnamon roll</h2>
+              <p class="description"> a sweet baked dough filled with a cinnamon-sugar filling. </p>
+              <p class="price">₹80 - ₹150</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://starbucksmenuprice.net/wp-content/uploads/2024/09/DALL%C2%B7E-2024-10-09-20.54.09-A-highly-detailed-and-visually-appealing-image-of-a-Caramel-Ribbon-Crunch-Frappuccino-Blended-Beverage-in-a-tall-clear-plastic-cup-with-a-domed-lid.-.webp" alt="neopolitan frappucino ">
+            </div>
+            <div class="card-content">
+              <h2>neopolitan frappucino </h2>
+              <p class="description">a blended, iced coffee drink from Starbucks that combines chocolate, strawberry, and vanilla flavors.</p>
+              <p class="price">₹200 - ₹270</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://img.freepik.com/premium-photo/stack-waffles-with-chocolate-drizzled-top_717440-4835.jpg?w=360" alt="Belgian Waffle">
+            </div>
+            <div class="card-content">
+              <h2>Belgian Waffle</h2>
+              <p class="description">Crispy waffle topped with fresh berries.</p>
+              <p class="price">₹120 - ₹170</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://static.vecteezy.com/system/resources/previews/026/695/391/large_2x/hot-chocolate-on-white-background-generative-ai-photo.jpg" alt="white hot chocolate">
+            </div>
+            <div class="card-content">
+              <h2>white hot chocolate</h2>
+              <p class="description">This stunning hot chocolate blend is made from the finest cocoa beans and offers the perfect creaminess and flavour.</p>
+              <p class="price"><b>₹80 - ₹120</b></p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://patelbakery.in/wp-content/uploads/2021/06/choco-pastry.jpg" alt="chocolate pestry">
+            </div>
+            <div class="card-content">
+              <h2>chocolate pestry</h2>
+              <p class="description">a baked cake, a layered pastry, or a sweet roll. </p>
+              <p class="price">₹50 - ₹100</p>
+            </div>
+          </div>
+          <div class="menu-card">
+            <div class="card-image">
+              <img src="https://img.freepik.com/free-photo/avocado-open-toast-with-avocado-slices-lemon-flax-seeds-sesame-seeds-black-bread-slices-top-view_2831-797.jpg?semt=ais_hybrid" alt="Avocado Toast">
+            </div>
+            <div class="card-content">
+              <h2>Avocado Toast</h2>
+              <p class="description">Toasted sourdough topped with avocado.</p>
+              <p class="price">₹100 - ₹140</p>
+            </div>
+            
+          </div>
+        </section>
+      
+
+    
+    <footer id="footer">
+        <div class="footer-container">
+            
+            <div class="footer-about">
+                <h3>Starbucks</h3>
+                <p>Your favorite spot for freshly brewed coffee and baked delights. Visit us to experience warmth and great taste.</p>
+            </div>
+    
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#location">Find Us</a></li>
+                </ul>
+            </div>
+            
+    
+            
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong>Unit 1, Babylon, Nobel House, Kalavad Rd, opposite BAPS Swaminarayan Temple, Harihar Society, Kotecha Nagar, Rajkot, Gujarat 360001</p>
+                <p><strong>Phone:</strong> +91 1860 266 0010</p>
+                <p><strong>Email:</strong> customercare@tatastarbucks.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/starbucksindia/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/starbucksindia/#" target="_blank">Instagram</a>
+                    <a href="https://x.com/StarbucksIndia?mx=2" target="_blank">Twitter</a>
+                    <a href="https://tsb-stores.starbucksindia.net/starbucks-coffee-shop-kalawad-road-rajkot-325707/Home" target="_blank">google</a>
+                    <a href="https://www.google.com/maps/place/Starbucks/@22.2911918,70.7805565,857m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3959cb2f0c5685a5:0xbc012b604ff8ae61!8m2!3d22.2911918!4d70.7805565!16s%2Fg%2F11w8l9qh4w?entry=ttu&g_ep=EgoyMDI1MDEyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">google map</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;  2025 Starbucks Coffee Company. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

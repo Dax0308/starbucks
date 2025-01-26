@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="Image/logo.png">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+@font-face {
+    font-family: dongle-regular;
+    src: url(dongle/Dongle-Regular.ttf);
+}
+@font-face {
+    font-family: dongle-bold;
+    src: url(dongle/Dongle-Bold.ttf);
+}
+@font-face {
+    font-family: dongle-light;
+    src: url(dongle/Dongle-Light.ttf);
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://www.shutterstock.com/image-photo/blurred-images-coffee-shop-cafe-600nw-1931334365.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.login-box {
+    position: relative;
+    width: 300px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    box-shadow: 0 0 5px black;
+}
+
+.login-box p {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 65px;
+    font-family: dongle-regular;
+}
+
+.login-box .textbox {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.login-box .textbox input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+}
+
+.login-box input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #03a9f4;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box input[type="submit"]:hover {
+    background: #2d83b1;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="background">
+    </div>
+
+    <div class="login-box">
+        
+        <p>Login</p>
+
+        <form action="index1.html">
+        
+            <div class="textbox">
+                <input type="text" name="Username" id="Username" placeholder="Username" required>
+            </div>
+            <div class="textbox">
+                <input type="password" name="Password" id="Password" placeholder="Password" required>
+            </div>
+            <input type="submit" value="Login">
+
+        </form>
+    
+    </div>
+
+</body>
+</html>
